@@ -151,17 +151,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 modal.find('.modal-title').text('UP WAY GAME')
                modalBody.html('<p><a href="https://naved90.itch.io/up-way">Play UP WAY on itch.io</a><br><img src="Assets/gameDemo.gif"  style="width:100%; height:auto;"/>');                            
               break;
-            case 'ProPlaceholder1':
-                modal.find('.modal-title').text('Enterprise Dashboard (Placeholder)');
-                modalBody.html('<p>A sleek enterprise-grade analytics dashboard with role-based access, blazing-fast APIs, and responsive charts. Demo coming soon.</p>');
+            case 'HVAC':
+                modal.find('.modal-title').text('Chatbot for HVAC related queries using OpenAI API');
+                modalBody.html('<iframe width="560" height="315" src="https://www.youtube.com/embed/O2U7A3uSEVo?si=RWVkP33KZR6wwhRp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>');
                 break;
-            case 'ProPlaceholder2':
-                modal.find('.modal-title').text('ML Pipeline (Placeholder)');
-                modalBody.html('<p>End-to-end ML pipeline with feature store, model registry, CI/CD, and real-time inference. Case study incoming.</p>');
+            case 'givegigs':
+                modal.find('.modal-title').text('Moderation system and dashboard');
+                modalBody.html('<p>A full-stack rolebased moderation system using nextJS and supabase for a fiverr like web platform called <a href="https://givegigs.vercel.app">GiveGigs</a>, also fixed authentication issues, and created profile page</p><br><img src="Assets/givegigs.png" style="width:100%; height:auto;"><br><img src="Assets/givegigs1.png" style="width:100%; height:auto;"><br><img src="Assets/givegigs2.png" style="width:100%; height:auto;">');
                 break;
-            case 'ProPlaceholder3':
-                modal.find('.modal-title').text('Cloud Infra (Placeholder)');
-                modalBody.html('<p>Scalable cloud infrastructure on Kubernetes with IaC, observability, and zero-downtime deploys. Details soon.</p>');
+            case 'ASP.NET':
+                modal.find('.modal-title').text('ASP.NET Backend experience');
+                modalBody.html('<div class="experience"><h2>Experience</h2><div class="job"><h3>Backend Developer @ Datamatics (EPP2D), Mumbai</h3><p><em>Apr 2022 – May 2023</em></p><ul><li>Built async API endpoints for CRUD operations.</li><li>Wrote advanced SQL: CTEs, temp tables, joins, triggers, views.</li><li>Optimized queries & indexes → reduced load time by 40%.</li><li>Gathered requirements & delivered client-driven solutions.</li></ul></div><div class="job"><h3>Backend Developer @ Datamatics (ePHR), Mumbai</h3><p><em>May 2023 – Nov 2024</em></p><ul><li>Developed full-stack features (Angular 15, .NET Core 7, SQL Server).</li><li>Implemented async services, PDF handling (iTextSharp), and security fixes.</li><li>Added localization support for multi-language use.</li><li>Created SQL stored procedures & bulk data scripts for millions of records.</li><li>Automated PDF forms with embedded JavaScript in Adobe Acrobat.</li></ul></div></div>');
+                break;
+            case 'DebateDash':
+                modal.find('.modal-title').text('DebateDash');
+                modalBody.html('<p>DebateDash is a social media and gamified platform that allows realtime debates challenges as well as social media like discussions between users, it has a currency system as well as profiles <a href="https://debatedash3.vercel.app/">Click here to check it out</a></p><br><img src="Assets/debatedash.gif" style="width:100%; height:auto;"><br><img src="Assets/debatedash1.gif" style="width:100%; height:auto;">');
                 break;
             default:
                 modalBody.html(`<p>Project not found.</p>`);
