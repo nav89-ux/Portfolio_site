@@ -17,34 +17,37 @@ document.addEventListener('DOMContentLoaded', () => {
         const activeContainer = document.querySelector('.icons-container.active');
         if (!activeContainer) return;
 
-        const activeIcons = activeContainer.querySelectorAll('.icon');
-        const padding = 100;
-        const containerWidth = window.innerWidth - padding; 
-        const containerHeight = window.innerHeight - (padding + 60); // 60 for taskbar/header spacing
+        const rect = activeContainer.getBoundingClientRect();
+        const containerWidth = Math.max(0, rect.width);
+        const containerHeight = Math.max(0, rect.height);
+        const edgeMargin = 12; // keep icons away from edges
 
+        const activeIcons = activeContainer.querySelectorAll('.icon');
         activeIcons.forEach(icon => {
+            // Reset any previous drag translate so we compute from clean origin
+            icon.style.transform = 'translate(0px, 0px)';
+            icon.setAttribute('data-x', 0);
+            icon.setAttribute('data-y', 0);
+
             const iconWidth = icon.offsetWidth || 120;
             const iconHeight = icon.offsetHeight || 120;
 
-            let randomX, randomY;
-            let isPositionValid = false;
+            const maxLeft = Math.max(edgeMargin, containerWidth - iconWidth - edgeMargin);
+            const maxTop = Math.max(edgeMargin, containerHeight - iconHeight - edgeMargin);
 
-            let guard = 0;
-            while (!isPositionValid && guard < 200) {
-                randomX = Math.floor(Math.random() * Math.max(1, (containerWidth - iconWidth)));
-                randomY = Math.floor(Math.random() * Math.max(1, (containerHeight - iconHeight)));
-
-                if (randomX >= 0 && randomY >= 0 &&
-                    randomX + iconWidth <= containerWidth &&
-                    randomY + iconHeight <= containerHeight) {
-                    isPositionValid = true;
-                }
-                guard++;
+            // If container is too small, fallback to (edgeMargin, edgeMargin)
+            let left = edgeMargin;
+            let top = edgeMargin;
+            if (containerWidth > iconWidth + edgeMargin * 2) {
+                left = Math.floor(edgeMargin + Math.random() * (maxLeft - edgeMargin));
+            }
+            if (containerHeight > iconHeight + edgeMargin * 2) {
+                top = Math.floor(edgeMargin + Math.random() * (maxTop - edgeMargin));
             }
 
             icon.style.position = 'absolute';
-            icon.style.left = `${randomX}px`;
-            icon.style.top = `${randomY}px`;
+            icon.style.left = `${left}px`;
+            icon.style.top = `${top}px`;
         });
     }
 
