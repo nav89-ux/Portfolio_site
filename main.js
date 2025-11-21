@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const startMenu = $('#startMenu');
     const tabButtons = document.querySelectorAll('.tab-btn');
     const iconContainers = document.querySelectorAll('.icons-container');
+    const hireMeButton = document.getElementById('hireMeButton');
 
     // Setup initial random positions for icons (only for active tab)
     function layoutActiveIcons() {
@@ -120,6 +121,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    if (hireMeButton) {
+        hireMeButton.addEventListener('click', () => {
+            openModal('HireMe');
+        });
+    }
+
     function openModal(project) {
         switch (project) {
             case '2DFluidSolver':
@@ -155,20 +162,24 @@ document.addEventListener('DOMContentLoaded', () => {
                modalBody.html('<p><a href="https://naved90.itch.io/up-way">Play UP WAY on itch.io</a><br><img src="Assets/gameDemo.gif"  style="width:100%; height:auto;"/>');                            
               break;
             case 'HVAC':
-                modal.find('.modal-title').text('Chatbot for HVAC related queries using OpenAI API');
-                modalBody.html('<iframe width="560" height="315" src="https://www.youtube.com/embed/O2U7A3uSEVo?si=RWVkP33KZR6wwhRp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>');
+                modal.find('.modal-title').text('AI HVAC support chatbot');
+                modalBody.html('<div><p>I built a 24/7 AI assistant for an HVAC business that answers common customer questions and captures leads using the OpenAI API.</p><ul><li>Trained on the service pages, pricing, and FAQs.</li><li>Helps visitors get instant answers instead of waiting for email replies.</li><li>Collects contact details so the team can follow up and book more jobs.</li></ul><p>Demo video:</p><iframe width="560" height="315" src="https://www.youtube.com/embed/O2U7A3uSEVo?si=RWVkP33KZR6wwhRp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>');
                 break;
             case 'givegigs':
-                modal.find('.modal-title').text('Moderation system and dashboard');
-                modalBody.html('<p>A full-stack rolebased moderation system using nextJS and supabase for a fiverr like web platform called <a href="https://givegigs.vercel.app">GiveGigs</a>, also fixed authentication issues, and created profile page</p><br><img src="Assets/givegigs.png" style="width:100%; height:auto;"><br><img src="Assets/givegigs1.png" style="width:100%; height:auto;"><br><img src="Assets/givegigs2.png" style="width:100%; height:auto;">');
+                modal.find('.modal-title').text('GiveGigs  moderation dashboard for a freelance marketplace');
+                modalBody.html('<div><p>GiveGigs is a freelance marketplace similar to Fiverr. I built a full role based moderation system and dashboard using Next.js and Supabase.</p><ul><li>Moderation views for reviewing gigs and user reports.</li><li>Role based access for admins, moderators, and normal users.</li><li>Fixed authentication issues and implemented user profile pages.</li></ul><p><a href="https://givegigs.vercel.app" target="_blank">Open GiveGigs</a></p><br><img src="Assets/givegigs.png" style="width:100%; height:auto;"><br><img src="Assets/givegigs1.png" style="width:100%; height:auto;"><br><img src="Assets/givegigs2.png" style="width:100%; height:auto;"></div>');
                 break;
             case 'ASP.NET':
                 modal.find('.modal-title').text('ASP.NET Backend experience');
                 modalBody.html('<div class="experience"><h2>Experience</h2><div class="job"><h3>Backend Developer @ Datamatics (EPP2D), Mumbai</h3><p><em>Apr 2022 – May 2023</em></p><ul><li>Built async API endpoints for CRUD operations.</li><li>Wrote advanced SQL: CTEs, temp tables, joins, triggers, views.</li><li>Optimized queries & indexes → reduced load time by 40%.</li><li>Gathered requirements & delivered client-driven solutions.</li></ul></div><div class="job"><h3>Backend Developer @ Datamatics (ePHR), Mumbai</h3><p><em>May 2023 – Nov 2024</em></p><ul><li>Developed full-stack features (Angular 15, .NET Core 7, SQL Server).</li><li>Implemented async services, PDF handling (iTextSharp), and security fixes.</li><li>Added localization support for multi-language use.</li><li>Created SQL stored procedures & bulk data scripts for millions of records.</li><li>Automated PDF forms with embedded JavaScript in Adobe Acrobat.</li></ul></div></div>');
                 break;
             case 'DebateDash':
-                modal.find('.modal-title').text('DebateDash');
-                modalBody.html('<p>DebateDash is a social media and gamified platform that allows realtime debates challenges as well as social media like discussions between users, it has a currency system as well as profiles <a href="https://debatedash3.vercel.app/">Click here to check it out</a></p><br><img src="Assets/debatedash.gif" style="width:100%; height:auto;"><br><img src="Assets/debatedash1.gif" style="width:100%; height:auto;">');
+                modal.find('.modal-title').text('DebateDash  real time debate platform');
+                modalBody.html('<div><p>DebateDash is a real time debate and discussion platform with profiles and in app currency. Users can challenge each other, join debates, and react to posts similar to a social network.</p><ul><li>Live debate challenges and threaded discussions.</li><li>Virtual currency and rewards to increase engagement.</li><li>User profiles and feed similar to a lightweight social network.</li></ul><p><a href="https://debatedash3.vercel.app/" target="_blank">Click here to check it out</a></p><br><img src="Assets/debatedash.gif" style="width:100%; height:auto;"><br><img src="Assets/debatedash1.gif" style="width:100%; height:auto;"></div>');
+                break;
+            case 'HireMe':
+                modal.find('.modal-title').text('Work with me');
+                modalBody.html('<div><h2>Freelance services</h2><p>I help founders and small busineses with practical, fast moving development work.</p><ul><li><strong>AI chatbots</strong> that answer FAQs and capture leads on your website using the OpenAI API.</li><li><strong>Web app fixes and features</strong> in stacks like Next.js, Supabase, and ASP.NET with SQL Server.</li></ul><p>Typical projects start around <strong>$150 to $300</strong> with clear scope and fast delivery.</p><p><strong>Contact</strong><br>Email: <a href="mailto:snaved159@gmail.com">snaved159@gmail.com</a></p></div>');
                 break;
             case 'googleSignIn':
                 modal.find('.modal-title').text('Google Sign-in Authentication');
