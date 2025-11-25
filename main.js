@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 break;
             case 'HireMe':
                 modal.find('.modal-title').text('Work with me');
-                modalBody.html('<div><h2>Freelance services</h2><p>I help founders and small busineses with practical, fast moving development work.</p><ul><li><strong>AI chatbots</strong> that answer FAQs and capture leads on your website using the OpenAI API.</li><li><strong>Web app fixes and features</strong> in stacks like Next.js, Supabase, and ASP.NET with SQL Server.</li></ul><p>Typical projects start around <strong>$150 to $300</strong> with clear scope and fast delivery.</p><p><strong>Contact</strong><br>Email: <a href="mailto:snaved159@gmail.com">snaved159@gmail.com</a></p></div>');
+                modalBody.html('<div><h2>Freelance services</h2><p>I help founders and small busineses with practical, fast moving development work.</p><ul><li><strong>AI chatbots</strong> that answer FAQs and capture leads on your website using the OpenAI API.</li><li><strong>Web app fixes and features</strong> in stacks like Next.js, Supabase, and ASP.NET with SQL Server.</li></ul><p>Typical projects start around <strong>$300 to $800</strong> with clear scope and fast delivery.</p><p><strong>Contact</strong><br>Email: <a href="mailto:snaved159@gmail.com">snaved159@gmail.com</a></p></div>');
                 break;
             case 'googleSignIn':
                 modal.find('.modal-title').text('Google Sign-in Authentication');
