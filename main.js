@@ -175,7 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 break;
             case 'DebateDash':
                 modal.find('.modal-title').text('DebateDash  real time debate platform');
-                modalBody.html('<div><p>DebateDash is a real time debate and discussion platform with profiles and in app currency. Users can challenge each other, join debates, and react to posts similar to a social network.</p><ul><li>Live debate challenges and threaded discussions.</li><li>Virtual currency and rewards to increase engagement.</li><li>User profiles and feed similar to a lightweight social network.</li></ul><p><a href="https://debatedash3.vercel.app/" target="_blank">Click here to check it out</a></p><br><img src="Assets/debatedash.gif" style="width:100%; height:auto;"><br><img src="Assets/debatedash1.gif" style="width:100%; height:auto;"></div>');
+                modalBody.html('<div><p>DebateDash is a real time debate and discussion platform with profiles and in app currency. Users can challenge each other, join debates, and react to posts similar to a social network.</p><ul><li>Live debate challenges and threaded discussions.</li><li>Virtual currency and rewards to increase engagement.</li><li>User profiles and feed similar to a lightweight social network.</li></ul><p><a href="https://debatedash.com/" target="_blank">Click here to check it out</a></p><br><img src="Assets/debatedash.gif" style="width:100%; height:auto;"><br><img src="Assets/debatedash1.gif" style="width:100%; height:auto;"></div>');
                 break;
             case 'HireMe':
                 modal.find('.modal-title').text('Work with me');
