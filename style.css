@@ -521,3 +521,20 @@ body, html {
 #projectModal.show .modal-dialog { transform: translateY(0) scale(1); }
 .modal-backdrop.show { opacity: .68; }
 @media (max-width: 600px) { #projectModal .modal-dialog { max-width: calc(100vw - 20px); margin: 10px auto; } #projectModal .modal-header { padding: 15px 16px; } #projectModal .modal-body { max-height: calc(100vh - 80px); padding: 18px 16px 22px; } }
+
+#projectModal .case-study h2 { margin: 0 0 10px; color: #0f172a; font-size: 1.5rem; line-height: 1.25; }
+#projectModal .case-study h3 { margin: 26px 0 10px; color: #0f172a; font-size: 1.08rem; }
+#projectModal .case-study ul { display: grid; gap: 8px; padding-left: 20px; }
+#projectModal .case-study-revenue { display: grid; gap: 4px; margin: 20px 0; padding: 18px; border: 1px solid #86efac; border-radius: 14px; background: linear-gradient(135deg, #f0fdf4, #ecfeff); }
+#projectModal .case-study-revenue span { color: #15803d; font-size: .76rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+#projectModal .case-study-revenue strong { color: #166534; font-size: 1.08rem; }
+#projectModal .case-study-revenue p { margin: 0; }
+#projectModal .case-study-links { display: flex; flex-wrap: wrap; gap: 10px; }
+#projectModal .case-study-link { display: inline-flex; align-items: center; justify-content: center; padding: 9px 12px; border-radius: 10px; background: #2563eb; color: #fff; font-size: .9rem; font-weight: 700; text-decoration: none; }
+#projectModal .case-study-link--secondary { border: 1px solid #bfdbfe; background: #eff6ff; color: #1d4ed8; }
+#projectModal .case-study-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+#projectModal .case-study-grid > div { display: grid; gap: 4px; padding: 14px; border: 1px solid #dbeafe; border-radius: 12px; background: #f8fbff; }
+#projectModal .case-study-grid strong { color: #1e3a8a; }
+#projectModal .case-study-grid span { font-size: .9rem; line-height: 1.4; }
+#projectModal .case-study img { margin-top: 24px; }
+@media (max-width: 600px) { #projectModal .case-study-grid { grid-template-columns: 1fr; } }

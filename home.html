@@ -28,7 +28,7 @@
     <section class="hero">
       <div class="container hero__inner">
         <div class="hero__content">
-          <p class="eyebrow">Founding / Product Engineer</p>
+          <p class="eyebrow">Fractional CTO / Founding Product Engineer</p>
           <h1 class="hero__title">I take ambitious product ideas from 0 → production with AI-native development.</h1>
           <p class="hero__subtitle">I work directly with founders to move from idea → architecture → MVP → production. Product thinking, full-stack engineering, and AI-native development—built to ship quickly without sacrificing quality.</p>
           <div class="hero__proof" aria-label="Core strengths">
@@ -112,7 +112,8 @@
                 <li><strong>Outcome:</strong> Engaging interactions and seamless debate workflows.</li>
               </ul>
               <div class="project__links">
-                <a class="btn btn-sm" href="https://debatedash3.vercel.app/" target="_blank" rel="noopener">Live</a>
+                <a class="btn btn-sm" href="https://debatedash.com" target="_blank" rel="noopener">Live</a>
+                <button class="btn btn-sm btn-ghost" type="button" data-case-study-open>Read case study</button>
               </div>
             </div>
           </article>
@@ -269,6 +270,29 @@
       </div>
     </section>
   </main>
+
+  <div class="case-study-modal" id="debateDashCaseStudy" role="dialog" aria-modal="true" aria-labelledby="debateDashCaseStudyTitle" aria-hidden="true">
+    <div class="case-study-modal__backdrop" data-case-study-close></div>
+    <div class="case-study-modal__dialog" role="document">
+      <div class="case-study-modal__header">
+        <div>
+          <p class="eyebrow">DebateDash case study</p>
+          <h2 id="debateDashCaseStudyTitle">From social idea to revenue-generating debate platform.</h2>
+        </div>
+        <button class="case-study-modal__close" type="button" aria-label="Close case study" data-case-study-close>×</button>
+      </div>
+      <div class="case-study-modal__body">
+        <article class="case-study">
+          <p>DebateDash combines posts, communities, real-time PvP debate arenas, AI practice, and reputation into a platform designed to make thoughtful argument engaging.</p>
+          <div class="case-study-revenue"><span>Revenue milestone</span><strong>Already generating revenue through advertising.</strong><p>The product is live, serving users, and validating a real monetization path.</p></div>
+          <div class="case-study-links"><a class="case-study-link" href="https://debatedash.com" target="_blank" rel="noopener">Visit DebateDash</a><a class="case-study-link case-study-link--secondary" href="https://www.linkedin.com/posts/naved-shaikh-6a947721a_buildinpublic-softwareengineering-systemdesign-ugcPost-7467258055521460224-uVC1/?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADc9-iEBFOyTBst6W-F52Hm43QLPQKgZlJ8" target="_blank" rel="noopener">Read the build-in-public post</a></div>
+          <section><h3>What I built</h3><ul><li>Social posts, discussion threads, profiles, friends, comment walls, and communities.</li><li>PvP debate arenas with a non-biased, fact-based AI judge.</li><li>PvE AI opponents for argument practice, plus reputation tied to participation and outcomes.</li></ul></section>
+          <section><h3>Product and engineering decisions</h3><div class="case-study-grid"><div><strong>Schema first</strong><span>Defined users, friendships, participants, match states, posts, comments, notifications, and reputation before polishing the UI.</span></div><div><strong>Skeleton before scale</strong><span>Started with the essential loop: create a post, create a debate, join it, and save data—then expanded.</span></div><div><strong>Buy where it helps</strong><span>Built custom engagement and debate mechanics, while using established analytics tooling instead of reinventing it.</span></div><div><strong>Purposeful AI</strong><span>Used AI for practice opponents, argument generation, and judging 1v1 debates—not as a superficial feature.</span></div><div><strong>Privacy by design</strong><span>Considered privacy policy, account controls, anonymous participation, and ownership of identity from the start.</span></div><div><strong>Founder partnership</strong><span>Owned requirements, features, architecture, database design, full-stack delivery, QA coordination, documentation, and monetization discussions.</span></div></div></section>
+          <img src="Assets/debatedash.png" alt="DebateDash product screen" loading="lazy" />
+        </article>
+      </div>
+    </div>
+  </div>
 
   <footer class="site-footer">
     <div class="container footer__inner">

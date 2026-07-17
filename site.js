@@ -34,4 +34,33 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  const caseStudyModal = document.getElementById('debateDashCaseStudy');
+  const caseStudyOpeners = document.querySelectorAll('[data-case-study-open]');
+  const caseStudyClosers = document.querySelectorAll('[data-case-study-close]');
+  let caseStudyTrigger = null;
+
+  const closeCaseStudy = () => {
+    if (!caseStudyModal) return;
+    caseStudyModal.classList.remove('is-open');
+    caseStudyModal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('modal-open');
+    if (caseStudyTrigger) caseStudyTrigger.focus();
+  };
+
+  caseStudyOpeners.forEach((opener) => {
+    opener.addEventListener('click', () => {
+      if (!caseStudyModal) return;
+      caseStudyTrigger = opener;
+      caseStudyModal.classList.add('is-open');
+      caseStudyModal.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('modal-open');
+      caseStudyModal.querySelector('.case-study-modal__close').focus();
+    });
+  });
+
+  caseStudyClosers.forEach((closer) => closer.addEventListener('click', closeCaseStudy));
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && caseStudyModal && caseStudyModal.classList.contains('is-open')) closeCaseStudy();
+  });
 });
