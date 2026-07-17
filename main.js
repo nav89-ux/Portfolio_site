@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function openModal(project) {
         switch (project) {
             case '2DFluidSolver':
-                modalBody.html(`<iframe width="560" height="315" src="https://www.youtube.com/embed/9BaUaAe4TmI?si=QRom_XN0AWaW5BO3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> <br><a href="https://github.com/spyrex69/2D-Fluid-Solver/blob/main/Fluidsim2D.cpp" > CLICK HERE TO SEE MY CODE ON GITHUB </a>`);
+                modalBody.html(`<iframe width="560" height="315" src="https://www.youtube.com/embed/9BaUaAe4TmI?si=QRom_XN0AWaW5BO3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> <br><a href="https://github.com/nav89-ux" > CLICK HERE TO SEE MY CODE ON GITHUB </a>`);
                 modal.find('.modal-title').text('2D fluid solver');
                 break;
             case 'MusicVisualizer':
@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 break; 
             case 'OrbitalGravitySimulation':
                 modal.find('.modal-title').text('Orbital Gravity Simulation')
-                var content = `<p>Simulates orbital dynamics using vector algebra. Pythagorean theorem in C++. <a href="https://github.com/spyrex69/orbital-gravity-sim" target="_blank">View Repository</a></p>
+                var content = `<p>Simulates orbital dynamics using vector algebra. Pythagorean theorem in C++. <a href="https://github.com/nav89-ux" target="_blank">View Repository</a></p>
                             <img src="Assets/gravityDemo1.gif" alt="Orbital Gravity Simulation GIF 1" style="width:100%; height:auto;"/>
                             <img src="Assets/gravity2SourcesSmall.gif" alt="Orbital Gravity Simulation GIF 2" style="width:100%; height:auto;"/>
                             `;
@@ -169,17 +169,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 modal.find('.modal-title').text('GiveGigs  moderation dashboard for a freelance marketplace');
                 modalBody.html('<div><p>GiveGigs is a freelance marketplace similar to Fiverr. I built a full role based moderation system and dashboard using Next.js and Supabase.</p><ul><li>Moderation views for reviewing gigs and user reports.</li><li>Role based access for admins, moderators, and normal users.</li><li>Fixed authentication issues and implemented user profile pages.</li></ul><p><a href="https://givegigs.vercel.app" target="_blank">Open GiveGigs</a></p><br><img src="Assets/givegigs.png" style="width:100%; height:auto;"><br><img src="Assets/givegigs1.png" style="width:100%; height:auto;"><br><img src="Assets/givegigs2.png" style="width:100%; height:auto;"></div>');
                 break;
-            case 'ASP.NET':
-                modal.find('.modal-title').text('ASP.NET Backend experience');
-                modalBody.html('<div class="experience"><h2>Experience</h2><div class="job"><h3>Backend Developer @ Datamatics (EPP2D)</h3><p><em>Apr 2022 – May 2023</em></p><ul><li>Built async API endpoints for CRUD operations.</li><li>Wrote advanced SQL: CTEs, temp tables, joins, triggers, views.</li><li>Optimized queries & indexes → reduced load time by 40%.</li><li>Gathered requirements & delivered client-driven solutions.</li></ul></div><div class="job"><h3>Backend Developer @ Datamatics (ePHR)</h3><p><em>May 2023 – Nov 2024</em></p><ul><li>Developed full-stack features (Angular 15, .NET Core 7, SQL Server).</li><li>Implemented async services, PDF handling (iTextSharp), and security fixes.</li><li>Added localization support for multi-language use.</li><li>Created SQL stored procedures & bulk data scripts for millions of records.</li><li>Automated PDF forms with embedded JavaScript in Adobe Acrobat.</li></ul></div></div>');
-                break;
             case 'DebateDash':
                 modal.find('.modal-title').text('DebateDash  real time debate platform');
                 modalBody.html('<div><p>DebateDash is a real time debate and discussion platform with profiles and in app currency. Users can challenge each other, join debates, and react to posts similar to a social network.</p><ul><li>Live debate challenges and threaded discussions.</li><li>Virtual currency and rewards to increase engagement.</li><li>User profiles and feed similar to a lightweight social network.</li></ul><p><a href="https://debatedash.com/" target="_blank">Click here to check it out</a></p><br><img src="Assets/debatedash.gif" style="width:100%; height:auto;"><br><img src="Assets/debatedash.png" style="width:100%; height:auto;"></div>');
                 break;
             case 'HireMe':
-                modal.find('.modal-title').text('Work with me');
-                modalBody.html('<div><h2>Freelance services</h2><p>I help founders and small busineses with practical, fast moving development work.</p><ul><li><strong>AI chatbots</strong> that answer FAQs and capture leads on your website using the OpenAI API. <strong>Price: 800$</strong></li><li><strong>Few bug fixes or one small important feature</strong> in stacks like Next.js, Supabase, and ASP.NET with SQL Server. <strong>Price: 100$</strong></li><li><strong>Refactor codebase or sections of codebase</strong> to improve structure, readability, and maintainability. <strong>Prices: small refactor 300$, medium-sized refactor 1000$, full codebase refactor 2000$</strong></li></ul><p>Typical custom projects starts with a free analysis and then a quote, with clear scope, timelines and fast delivery. $20 an hour</p><p><strong>Contact</strong><br>Email: <a href="mailto:snaved159@gmail.com">snaved159@gmail.com</a></p></div>');
+                modal.find('.modal-title').text('Let’s build something valuable');
+                modalBody.html('<div class="hire-me-modal"><p class="process-kicker">Founder-focused product engineering</p><h2>From an early idea to a product you can confidently grow.</h2><p class="hire-me-intro">I work directly with founders and small teams to clarify the opportunity, make smart technical decisions, and ship useful software without unnecessary complexity.</p><div class="hire-me-value-grid"><div><strong>Build the right thing</strong><span>I help turn loose requirements into a focused roadmap, differentiated features, and a practical first version.</span></div><div><strong>Own the technical work</strong><span>Architecture, database design, frontend, backend, AI integration, quality, and documentation—all connected.</span></div><div><strong>Stay aligned as we ship</strong><span>Clear communication, visible progress, and fast iteration when the product needs to change.</span></div></div><div class="hire-me-approach"><strong>How we start</strong><p>We begin with a free conversation about your goals, users, and scope. I will give you an honest recommendation, clear next steps, and a transparent quote before work begins.</p></div><p class="hire-me-rate"><strong>Transparent rate:</strong> $20 an hour for scoped development work.</p><p class="hire-me-contact"><strong>Tell me what you’re building</strong><br>Email: <a href="mailto:snaved159@gmail.com">snaved159@gmail.com</a></p></div>');
                 break;
             case 'googleSignIn':
                 modal.find('.modal-title').text('Google Sign-in Authentication');
@@ -188,6 +184,10 @@ document.addEventListener('DOMContentLoaded', () => {
             case 'Testimonial':
                 modal.find('.modal-title').text('Client testimonial');
                 modalBody.html('<img src="Assets/Testimonial.jpeg" alt="Client testimonial praising Naved\'s AI development work" style="width:100%; height:auto;">');
+                break;
+            case 'ProductProcess':
+                modal.find('.modal-title').text('From idea to production');
+                modalBody.html('<div class="product-process-modal"><p class="process-kicker">Founding / Product Engineer</p><h2>I help founders turn ideas into products people want.</h2><p>I combine product thinking, full-stack engineering, and AI-native development to move from idea → architecture → MVP → production without sacrificing quality.</p><div class="desktop-process-flow"><div><span>01</span><strong>Shape</strong><small>Requirements and product direction</small></div><div><span>02</span><strong>Research</strong><small>Competitors and market gaps</small></div><div><span>03</span><strong>Build</strong><small>Architecture, AI, frontend, backend</small></div><div><span>04</span><strong>Iterate</strong><small>Feedback, quality, and growth</small></div></div><div class="ownership-list"><span>Product strategy</span><span>System design</span><span>AI integration</span><span>Team &amp; QA coordination</span><span>Documentation</span><span>Monetization input</span></div></div>');
                 break;
             default:
                 modalBody.html(`<p>Project not found.</p>`);

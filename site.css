@@ -169,3 +169,29 @@ ul { margin: 0; padding: 0; }
 .footer__links a {
   color: var(--brand-600);
 }
+
+.eyebrow { margin: 0 0 var(--space-2); color: var(--brand-600); font-size: .78rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.hero__proof { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 var(--space-5); }
+.hero__proof span { padding: 6px 10px; border: 1px solid #bfdbfe; border-radius: 999px; background: #eff6ff; color: #1d4ed8; font-size: .84rem; font-weight: 700; }
+.process-flow { display: grid; gap: var(--space-3); counter-reset: step; }
+.process-step { position: relative; min-height: 150px; padding: 20px 20px 20px 92px; border: 1px solid var(--border); border-radius: var(--radius); background: #fff; box-shadow: var(--shadow); overflow: hidden; animation: process-enter .55s both; }
+.process-step:nth-child(2) { animation-delay: .08s; }
+.process-step:nth-child(3) { animation-delay: .16s; }
+.process-step:nth-child(4) { animation-delay: .24s; }
+.process-step::after { content: ''; position: absolute; left: 35px; top: 72px; width: 2px; height: calc(100% - 40px); background: linear-gradient(#93c5fd, transparent); }
+.process-step:last-child::after { display: none; }
+.process-icon { position: absolute; left: 18px; top: 20px; display: grid; place-items: center; width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, #2563eb, #7c3aed); color: #fff; box-shadow: 0 8px 18px rgba(37,99,235,.24); }
+.process-icon svg { width: 21px; height: 21px; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.8; }
+.process-number { display: block; color: #94a3b8; font-size: .78rem; font-weight: 800; letter-spacing: .1em; }
+.process-step h3 { margin: 2px 0 6px; font-size: 1.05rem; }
+.process-step p { margin: 0; color: var(--text-muted); font-size: .94rem; }
+.ownership-section { background: linear-gradient(145deg, #0f172a, #172554); color: #fff; }
+.ownership-section .eyebrow { color: #93c5fd; }
+.ownership-section .section__lead { color: #cbd5e1; }
+.ownership-grid { display: grid; gap: var(--space-3); }
+.ownership-card { display: grid; gap: 8px; padding: 20px; border: 1px solid rgba(191,219,254,.24); border-radius: var(--radius); background: rgba(255,255,255,.06); }
+.ownership-card strong { color: #bfdbfe; font-size: 1.05rem; }
+.ownership-card span { color: #e2e8f0; }
+@media (min-width: 720px) { .process-flow, .ownership-grid { grid-template-columns: repeat(2, 1fr); } .process-step:nth-child(2)::after { display: none; } }
+@keyframes process-enter { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+@media (prefers-reduced-motion: reduce) { .process-step { animation: none; } }
