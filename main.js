@@ -185,6 +185,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 modal.find('.modal-title').text('Google Sign-in Authentication');
                 modalBody.html('<p>Mobile app Authentication with Sign-in with google in react native and supabase</p><br><img src="Assets/auth.png" style="width:100%; height:auto;">');
                 break;
+            case 'Testimonial':
+                modal.find('.modal-title').text('Client testimonial');
+                modalBody.html('<img src="Assets/Testimonial.jpeg" alt="Client testimonial praising Naved\'s AI development work" style="width:100%; height:auto;">');
+                break;
             default:
                 modalBody.html(`<p>Project not found.</p>`);
         }
