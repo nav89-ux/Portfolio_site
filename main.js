@@ -182,8 +182,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 modalBody.html('<p>Mobile app Authentication with Sign-in with google in react native and supabase</p><br><img src="Assets/auth.png" style="width:100%; height:auto;">');
                 break;
             case 'Testimonial':
-                modal.find('.modal-title').text('Client testimonial');
-                modalBody.html('<img src="Assets/Testimonial.jpeg" alt="Client testimonial praising Naved\'s AI development work" style="width:100%; height:auto;">');
+                modal.find('.modal-title').text('Client testimonials');
+                modalBody.html(`<div class="testimonials-modal"><div class="testimonial-block"><img src="Assets/MattsTestimonialTestimonial.jpeg" alt="Matthew Jackson testimonial praising Naved's AI development work" style="width:100%; height:auto;"><div class="testimonial-block__meta"><strong>MattyJacks</strong><span>Matthew Jackson</span><small>Founder @ MattyJacks.com — Outsourcing, Consulting, Websites, Software</small></div></div><div class="testimonial-block"><img src="Assets/mike'sTestimonial.jpeg" alt="Michael Becerra testimonial about DebateDash" style="width:100%; height:auto;"><div class="testimonial-block__meta"><strong>Michael Becerra</strong><small>Founder at DebateDash.com</small></div></div></div>`);
                 break;
             case 'ProductProcess':
                 modal.find('.modal-title').text('From idea to production');
