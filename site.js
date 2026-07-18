@@ -35,32 +35,41 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  const caseStudyModal = document.getElementById('debateDashCaseStudy');
   const caseStudyOpeners = document.querySelectorAll('[data-case-study-open]');
   const caseStudyClosers = document.querySelectorAll('[data-case-study-close]');
+  let activeCaseStudy = null;
   let caseStudyTrigger = null;
 
+  const getCaseStudyModal = (opener) => {
+    const target = opener.getAttribute('data-case-study-open');
+    const idMap = { debatedash: 'debateDashCaseStudy', givegigs: 'giveGigsCaseStudy' };
+    return document.getElementById(idMap[target] || target);
+  };
+
   const closeCaseStudy = () => {
-    if (!caseStudyModal) return;
-    caseStudyModal.classList.remove('is-open');
-    caseStudyModal.setAttribute('aria-hidden', 'true');
+    if (!activeCaseStudy) return;
+    activeCaseStudy.classList.remove('is-open');
+    activeCaseStudy.setAttribute('aria-hidden', 'true');
     document.body.classList.remove('modal-open');
     if (caseStudyTrigger) caseStudyTrigger.focus();
+    activeCaseStudy = null;
   };
 
   caseStudyOpeners.forEach((opener) => {
     opener.addEventListener('click', () => {
-      if (!caseStudyModal) return;
+      const modal = getCaseStudyModal(opener);
+      if (!modal) return;
+      activeCaseStudy = modal;
       caseStudyTrigger = opener;
-      caseStudyModal.classList.add('is-open');
-      caseStudyModal.setAttribute('aria-hidden', 'false');
+      modal.classList.add('is-open');
+      modal.setAttribute('aria-hidden', 'false');
       document.body.classList.add('modal-open');
-      caseStudyModal.querySelector('.case-study-modal__close').focus();
+      modal.querySelector('.case-study-modal__close').focus();
     });
   });
 
   caseStudyClosers.forEach((closer) => closer.addEventListener('click', closeCaseStudy));
   document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape' && caseStudyModal && caseStudyModal.classList.contains('is-open')) closeCaseStudy();
+    if (event.key === 'Escape' && activeCaseStudy) closeCaseStudy();
   });
 });

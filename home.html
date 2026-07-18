@@ -98,7 +98,7 @@
               </ul>
               <div class="project__links">
                 <a class="btn btn-sm btn-glow" href="https://debatedash.com" target="_blank" rel="noopener">Live</a>
-                <button class="btn btn-sm btn-glow case-study-btn" type="button" data-case-study-open>Read case study <span class="case-study-btn__arrow" aria-hidden="true">→</span></button>
+                <button class="btn btn-sm btn-glow case-study-btn" type="button" data-case-study-open="debatedash">Read case study <span class="case-study-btn__arrow" aria-hidden="true">→</span></button>
               </div>
             </div>
           </article>
@@ -115,7 +115,7 @@
               </ul>
               <div class="project__links">
                 <a class="btn btn-sm btn-glow" href="https://givegigs.vercel.app" target="_blank" rel="noopener">Live</a>
-                <a class="btn btn-sm btn-ghost" href="#" aria-disabled="true">Case study soon</a>
+                <button class="btn btn-sm btn-glow case-study-btn" type="button" data-case-study-open="givegigs">Read case study <span class="case-study-btn__arrow" aria-hidden="true">→</span></button>
               </div>
             </div>
           </article>
@@ -306,6 +306,29 @@
           <section><h3>What I built</h3><ul><li>Social posts, discussion threads, profiles, friends, comment walls, and communities.</li><li>PvP debate arenas with a non-biased, fact-based AI judge.</li><li>PvE AI opponents for argument practice, plus reputation tied to participation and outcomes.</li></ul></section>
           <section><h3>Product and engineering decisions</h3><div class="case-study-grid"><div><strong>Schema first</strong><span>Defined users, friendships, participants, match states, posts, comments, notifications, and reputation before polishing the UI.</span></div><div><strong>Skeleton before scale</strong><span>Started with the essential loop: create a post, create a debate, join it, and save data—then expanded.</span></div><div><strong>Buy where it helps</strong><span>Built custom engagement and debate mechanics, while using established analytics tooling instead of reinventing it.</span></div><div><strong>Purposeful AI</strong><span>Used AI for practice opponents, argument generation, and judging 1v1 debates—not as a superficial feature.</span></div><div><strong>Privacy by design</strong><span>Considered privacy policy, account controls, anonymous participation, and ownership of identity from the start.</span></div><div><strong>Founder partnership</strong><span>Owned requirements, features, architecture, database design, full-stack delivery, QA coordination, documentation, and monetization discussions.</span></div></div></section>
           <img src="Assets/debatedash.png" alt="DebateDash product screen" loading="lazy" />
+        </article>
+      </div>
+    </div>
+  </div>
+
+  <div class="case-study-modal" id="giveGigsCaseStudy" role="dialog" aria-modal="true" aria-labelledby="giveGigsCaseStudyTitle" aria-hidden="true">
+    <div class="case-study-modal__backdrop" data-case-study-close></div>
+    <div class="case-study-modal__dialog" role="document">
+      <div class="case-study-modal__header">
+        <div>
+          <p class="eyebrow">GiveGigs case study</p>
+          <h2 id="giveGigsCaseStudyTitle">Your schema is the single source of truth for AI tooling.</h2>
+        </div>
+        <button class="case-study-modal__close" type="button" aria-label="Close case study" data-case-study-close>×</button>
+      </div>
+      <div class="case-study-modal__body">
+        <article class="case-study">
+          <p>A manual database change without a migration caused schema drift, making environments, tooling, and AI unreliable. The fix was to restore migration history and sync the schema.</p>
+          <section><h3>The drift</h3><ul><li>Local environments stopped matching production.</li><li>New developers couldn't reproduce the database state.</li><li>Generated types became unreliable.</li><li>AI-assisted tools started generating code against a schema that didn't exist in source control.</li></ul></section>
+          <section><h3>The fix</h3><ol><li>Identified the untracked schema change.</li><li>Removed the incorrect migration state from migration history.</li><li>Reapplied the database migrations.</li><li>Normalized the schema so source control, migration history, and the database were aligned again.</li></ol></section>
+          <section><h3>Lesson</h3><p>Migration history is part of your application's source code. When database changes bypass the migration process, you create risk for deployments and confuse tooling, type generation, CI pipelines, and AI coding assistants that depend on the schema being reliable.</p><div class="case-study-grid"><div><strong>Never bypass migrations</strong><span>Don't apply production schema changes without a migration.</span></div><div><strong>Review migrations as code</strong><span>Treat migration files with the same rigor as application code.</span></div><div><strong>Version-control schema history</strong><span>Standardize schema changes with permission controls.</span></div><div><strong>Verify environments</strong><span>Regularly check that local, staging, and production schemas match.</span></div></div></section>
+          <div class="case-study-links"><a class="case-study-link" href="https://givegigs.vercel.app" target="_blank" rel="noopener">Open GiveGigs</a></div>
+          <img src="Assets/givegigs.png" alt="GiveGigs moderation dashboard" loading="lazy" />
         </article>
       </div>
     </div>
