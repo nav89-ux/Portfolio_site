@@ -149,6 +149,10 @@ ul { margin: 0; padding: 0; }
 .project__title { margin: 0 0 var(--space-3); font-size: 1.125rem; }
 .project__bullets { list-style: none; display: grid; gap: 8px; color: var(--text-muted); margin-bottom: var(--space-4); }
 .project__links { display: flex; gap: 8px; flex-wrap: wrap; }
+.project__stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; padding: 10px 0; color: var(--text-muted); }
+.project__stats span { display: flex; align-items: baseline; gap: 6px; font-size: .92rem; }
+.project__stats strong { font-size: 1.05rem; color: #0f172a; }
+.project__divider { letter-spacing: 2px; color: var(--text-muted); opacity: .35; font-size: .75rem; padding: 2px 0; }
 
 .stack { display: grid; gap: var(--space-5); }
 @media (min-width: 760px) { .stack { grid-template-columns: repeat(3, 1fr); } }
