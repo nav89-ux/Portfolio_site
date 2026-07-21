@@ -95,7 +95,7 @@
                   <span><strong>Led</strong> 3-person team</span>
                 </li>
                 <li class="project__divider" aria-hidden="true">━━━━━━━━━━━━━━</li>
-                <li><strong>Challenge:</strong> Enable real‑time debate, challenges, and social reactions at scale.</li>
+                <li><strong>Challenge:</strong> Enable gamification on the traditional forum based debating formate, challenges, LLM integrations, and social reactions at scale.</li>
                 <li><strong>Architecture:</strong> Next.js + Supabase, real‑time features, LLM integrations, Mixpanel, auth/email providers, Windsurf/Devin workflows.</li>
                 <li><strong>Key Decisions:</strong> Shipped MVP in 3 months and production launch in 8 months; chose a modular, stress‑tested architecture for rapid feature delivery.</li>
                 <li><strong>Business Impact:</strong> Live product generating revenue through advertising and serving 20k+ users; documented features for fast onboarding of devs and QA.</li>
@@ -305,11 +305,80 @@
       </div>
       <div class="case-study-modal__body">
         <article class="case-study">
-          <p>DebateDash combines posts, communities, real-time PvP debate arenas, AI practice, and reputation into a platform designed to make thoughtful argument engaging.</p>
-          <div class="case-study-revenue"><span>Revenue milestone</span><strong>Already generating revenue through advertising.</strong><p>The product is live, serving users, and validating a real monetization path.</p></div>
-          <div class="case-study-links"><a class="case-study-link" href="https://debatedash.com" target="_blank" rel="noopener">Visit DebateDash</a><a class="case-study-link case-study-link--secondary" href="https://www.linkedin.com/posts/naved-shaikh-6a947721a_buildinpublic-softwareengineering-systemdesign-ugcPost-7467258055521460224-uVC1/?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADc9-iEBFOyTBst6W-F52Hm43QLPQKgZlJ8" target="_blank" rel="noopener">Read the build-in-public post</a></div>
-          <section><h3>What I built</h3><ul><li>Social posts, discussion threads, profiles, friends, comment walls, and communities.</li><li>PvP debate arenas with a non-biased, fact-based AI judge.</li><li>PvE AI opponents for argument practice, plus reputation tied to participation and outcomes.</li></ul></section>
-          <section><h3>Product and engineering decisions</h3><div class="case-study-grid"><div><strong>Schema first</strong><span>Defined users, friendships, participants, match states, posts, comments, notifications, and reputation before polishing the UI.</span></div><div><strong>Skeleton before scale</strong><span>Started with the essential loop: create a post, create a debate, join it, and save data—then expanded.</span></div><div><strong>Buy where it helps</strong><span>Built custom engagement and debate mechanics, while using established analytics tooling instead of reinventing it.</span></div><div><strong>Purposeful AI</strong><span>Used AI for practice opponents, argument generation, and judging 1v1 debates—not as a superficial feature.</span></div><div><strong>Privacy by design</strong><span>Considered privacy policy, account controls, anonymous participation, and ownership of identity from the start.</span></div><div><strong>Founder partnership</strong><span>Owned requirements, features, architecture, database design, full-stack delivery, QA coordination, documentation, and monetization discussions.</span></div></div></section>
+          <p class="case-study-lead">A real-time social debate platform that turns argument into a competitive, engaging product loop.</p>
+
+          <section>
+            <h3>Overview</h3>
+            <p>DebateDash combines posts, communities, real-time PvP debate arenas, AI practice opponents, and reputation into a single platform. I took it from concept to production over 8 months, serving 20k+ users and generating revenue through advertising.</p>
+            <div class="case-study-links"><a class="case-study-link" href="https://debatedash.com" target="_blank" rel="noopener">Visit DebateDash</a><a class="case-study-link case-study-link--secondary" href="https://www.linkedin.com/posts/naved-shaikh-6a947721a_buildinpublic-softwareengineering-systemdesign-ugcPost-7467258055521460224-uVC1/?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADc9-iEBFOyTBst6W-F52Hm43QLPQKgZlJ8" target="_blank" rel="noopener">Read the build-in-public post</a></div>
+          </section>
+
+          <section>
+            <h3>The challenge</h3>
+            <p>Debate is naturally adversarial. The product had to make argument feel social, fair, and repeatable—not toxic or one-sided.</p>
+            <ul>
+              <li>Keep debates fact-based and non-biased without human moderation scaling costs.</li>
+              <li>Support real-time PvP matchmaking and social feeds in a small-team setting.</li>
+              <li>Ship an MVP fast while leaving room for growth, monetization, and AI features.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Constraints</h3>
+            <ul>
+              <li>Small team: founder + 2 developers + 1 QA engineer.</li>
+              <li>Hard deadline: MVP in 3 months, production launch in 8 months.</li>
+              <li>AI costs and latency had to be managed carefully from day one.</li>
+              <li>Reputation, moderation, and privacy requirements from launch.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Architecture</h3>
+            <p>Next.js frontend, Supabase for auth/real-time database, LLM services for AI judge and practice opponents, Mixpanel for analytics, and dedicated email providers for notifications.</p>
+            <img src="Assets/debatedash.gif" alt="DebateDash application demo" loading="lazy" />
+          </section>
+
+          <section>
+            <h3>Major technical decisions</h3>
+            <ul>
+              <li><strong>Schema first:</strong> defined users, friendships, participants, match states, posts, comments, notifications, and reputation before polishing the UI.</li>
+              <li><strong>Skeleton before scale:</strong> shipped the core loop—create a post, create a debate, join it, save data—then expanded.</li>
+              <li><strong>Custom core, bought telemetry:</strong> built debate mechanics in-house, used Mixpanel for product analytics.</li>
+              <li><strong>Purposeful AI:</strong> used AI for practice opponents, argument generation, and judging—not as a superficial add-on.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Tradeoffs</h3>
+            <ul>
+              <li><strong>Custom debate engine vs. off-the-shelf forum:</strong> chose custom to own the core product loop.</li>
+              <li><strong>AI judge vs. human moderation:</strong> AI for speed and scale, with fact-based guardrails.</li>
+              <li><strong>Build vs. buy analytics:</strong> bought Mixpanel to stay focused on the product.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Metrics</h3>
+            <div class="case-study-grid">
+              <div><strong>3 months</strong><span>MVP shipped.</span></div>
+              <div><strong>8 months</strong><span>Production launch.</span></div>
+              <div><strong>20k+</strong><span>Users served.</span></div>
+              <div><strong>Revenue</strong><span>Generating through advertising.</span></div>
+            </div>
+          </section>
+
+          <section>
+            <h3>Lessons</h3>
+            <ul>
+              <li>Partner early on requirements and timelines; unclear scope kills velocity.</li>
+              <li>Balance hands-on coding with leading the team—both are delivery risks if neglected.</li>
+              <li>AI-native workflows (Windsurf/Devin) accelerate iteration but still need strong judgment.</li>
+              <li>Schema-first design prevents the most expensive rewrites.</li>
+              <li>Good documentation is a force multiplier for QA and new developers.</li>
+            </ul>
+          </section>
+
           <img src="Assets/debatedash.png" alt="DebateDash product screen" loading="lazy" />
         </article>
       </div>
@@ -328,12 +397,81 @@
       </div>
       <div class="case-study-modal__body">
         <article class="case-study">
-          <p>A manual database change without a migration caused schema drift, making environments, tooling, and AI unreliable. The fix was to restore migration history and sync the schema.</p>
-          <section><h3>The drift</h3><ul><li>Local environments stopped matching production.</li><li>New developers couldn't reproduce the database state.</li><li>Generated types became unreliable.</li><li>AI-assisted tools started generating code against a schema that didn't exist in source control.</li></ul></section>
-          <section><h3>The fix</h3><ol><li>Identified the untracked schema change.</li><li>Removed the incorrect migration state from migration history.</li><li>Reapplied the database migrations.</li><li>Normalized the schema so source control, migration history, and the database were aligned again.</li></ol></section>
-          <section><h3>Lesson</h3><p>Migration history is part of your application's source code. When database changes bypass the migration process, you create risk for deployments and confuse tooling, type generation, CI pipelines, and AI coding assistants that depend on the schema being reliable.</p><div class="case-study-grid"><div><strong>Never bypass migrations</strong><span>Don't apply production schema changes without a migration.</span></div><div><strong>Review migrations as code</strong><span>Treat migration files with the same rigor as application code.</span></div><div><strong>Version-control schema history</strong><span>Standardize schema changes with permission controls.</span></div><div><strong>Verify environments</strong><span>Regularly check that local, staging, and production schemas match.</span></div></div></section>
-          <div class="case-study-links"><a class="case-study-link" href="https://givegigs.vercel.app" target="_blank" rel="noopener">Open GiveGigs</a></div>
-          <img src="Assets/givegigs.png" alt="GiveGigs moderation dashboard" loading="lazy" />
+          <p class="case-study-lead">A freelance marketplace moderation dashboard that surfaced why your schema must be a single source of truth.</p>
+
+          <section>
+            <h3>Overview</h3>
+            <p>GiveGigs is a freelance marketplace similar to Fiverr. I built a full role-based moderation system and dashboard using Next.js and Supabase. During development, an untracked manual schema change caused schema drift that broke local environments, type generation, CI pipelines, and AI-assisted coding tools.</p>
+            <div class="case-study-links"><a class="case-study-link" href="https://givegigs.vercel.app" target="_blank" rel="noopener">Open GiveGigs</a></div>
+          </section>
+
+          <section>
+            <h3>The challenge</h3>
+            <p>Build a reliable role-based moderation system while keeping the database schema trustworthy across developers, tooling, and AI assistants.</p>
+            <ul>
+              <li>Moderation views needed strict, role-based access controls.</li>
+              <li>AI coding assistants were generating code against tables and columns that only existed in production.</li>
+              <li>Onboarding new developers failed because their local schema didn't match production.</li>
+              <li>The root change was hidden—nobody had documented or admitted the manual edit.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Constraints</h3>
+            <ul>
+              <li>Small, distributed team with shared database access.</li>
+              <li>CI, type generation, and AI tools all depended on migration history matching reality.</li>
+              <li>Stopping to fix drift delayed feature work, but continuing would compound the damage.</li>
+              <li>No formal schema-change permissions or audit process existed yet.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Architecture</h3>
+            <p>Next.js frontend, Supabase for auth/real-time database, Row Level Security policies, and role-based access for admins, moderators, and users.</p>
+            <img src="Assets/givegigs.png" alt="GiveGigs moderation dashboard" loading="lazy" />
+          </section>
+
+          <section>
+            <h3>Major technical decisions</h3>
+            <ul>
+              <li><strong>Schema-first recovery:</strong> mapped the actual production schema against migration history before writing any fix.</li>
+              <li><strong>Clean migration state:</strong> removed the incorrect migration entry rather than layering another band-aid.</li>
+              <li><strong>Reapply and normalize:</strong> re-ran migrations until source control, migration history, and the database matched exactly.</li>
+              <li><strong>Process over speed:</strong> introduced permission controls and review rules for all future schema changes.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Tradeoffs</h3>
+            <ul>
+              <li><strong>Stop feature work to fix drift vs. ship around it:</strong> chose root-cause fix to prevent compounding errors in AI-generated code.</li>
+              <li><strong>Strict migration process vs. one-off convenience:</strong> chose process to protect the team's velocity long-term.</li>
+              <li><strong>Audit existing access vs. blame:</strong> focused on controls and documentation, not individuals.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Metrics</h3>
+            <div class="case-study-grid">
+              <div><strong>100%</strong><span>Schema alignment restored across local, staging, and production.</span></div>
+              <div><strong>0</strong><span>AI-generated references to phantom schema objects after fix.</span></div>
+              <div><strong>Reproducible</strong><span>New developers could spin up a matching database state.</span></div>
+              <div><strong>Controlled</strong><span>Schema changes now require migration + review.</span></div>
+            </div>
+          </section>
+
+          <section>
+            <h3>Lessons</h3>
+            <ul>
+              <li>Treat migration history as source code, not as a deployment side effect.</li>
+              <li>Never apply production schema changes without a migration.</li>
+              <li>Review migration files with the same rigor as application code.</li>
+              <li>Keep schema history under version control and standardize who can change what.</li>
+              <li>Regularly verify that local, staging, and production schemas match.</li>
+              <li>A single unrecorded change can silently break AI tooling, CI, and new-developer onboarding.</li>
+            </ul>
+          </section>
         </article>
       </div>
     </div>
