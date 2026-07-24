@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const getCaseStudyModal = (opener) => {
     const target = opener.getAttribute('data-case-study-open');
-    const idMap = { debatedash: 'debateDashCaseStudy', givegigs: 'giveGigsCaseStudy' };
+    const idMap = { debatedash: 'debateDashCaseStudy', givegigs: 'giveGigsCaseStudy', qualifyai: 'qualifyAiCaseStudy' };
     return document.getElementById(idMap[target] || target);
   };
 
